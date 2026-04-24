@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selendang Mayang - Es & Kue Legendaris Betawi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-ice-cream"></i>
+                Abang-None Jakarte
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <button class="cart-btn" onclick="openCart()">
+                <i class="fas fa-shopping-cart"></i>
+                Keranjang <span id="cartCount">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Kuliner Khas Betawi</h1>
+            <p>Legenda Selendang Manis Betawi Sejak 1920<br>Rasa Asli Jakarta yang Tak Terlupakan</p>
+            <a href="#products" class="cta-button">Pesan Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2 class="section-title">Menu Spesial Betawi</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image es">
+                    <div class="emoji">🧊🍧</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Es Selendang Mayang</h3>
+                    <div class="product-price">Rp 8.000</div>
+                    <p class="product-description">Es campur khas Betawi dengan santan kental, buah-buahan segar, cendol, dan kacang merah. Rasa manis gurih yang menyegarkan!</p>
+                    <button class="add-to-cart" onclick="addToCart('Es Selendang Mayang', 25000, 1)">
+                        <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image kue">
+                    <div class="emoji">🍰🎂</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Kue Lapis Betawi</h3>
+                    <div class="product-price">Rp 6.000</div>
+                    <p class="product-description">Kue lapis legit asli Betawi berlapis 18 dengan rempah-rempah pilihan. Lembut, manis, dan wangi!</p>
+                    <button class="add-to-cart" onclick="addToCart('Kue Lapis Betawi', 35000, 1)">
+                        <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2 class="section-title">Warisan Kuliner Betawi</h2>
+            <p>
+                Sejak tahun 1920, <strong>Selendang Mayang</strong> telah menjadi ikon kuliner Jakarta. 
+                Kami melestarikan rasa asli Betawi dengan resep turun-temurun yang diracik oleh 
+                <em>"Nyai"</em> generasi ke-5. Setiap sendok es dan setiap lapis kue adalah cerita 
+                tentang Jakarta yang kita cintai.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Kunjungi Kami</h2>
+        <div class="contact-info">
+            <p><strong>📍 SMK Negeri 22 Jakarta</strong></p>
+            <p><strong>🕒 Buka: 07.55 - 14.30 WIB</strong></p>
+        </div>
+        <div class="social-links">
+            <a href="https://wa.me/6287789064507" class="social-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#" class="social-btn instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Abang-None Jakarte - Legenda Manis Betawi. Semua hak dilindungi.</p>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart" onclick="closeCart()">&times;</span>
+            <h2><i class="fas fa-shopping-cart"></i> Keranjang Belanja</h2>
+            <div id="cartItems" class="cart-items-list"></div>
+            <div class="cart-total">
+                <h3>Total: <span id="cartTotal">Rp 0</span></h3>
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
